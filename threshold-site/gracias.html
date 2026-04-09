@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¡Tu lugar está reservado! — Threshold</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Cormorant+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:#0F0820;--purple:#7B2FBE;--gold:#C9963A;--gold2:#E8B45A;
+    --cream:#F5F0EB;--cream2:#FDFAF7;--sand:#E6DDD2;--muted:#7A6B94;
+    --serif:'Playfair Display',Georgia,serif;
+    --sans:'DM Sans',system-ui,sans-serif;
+    --italic:'Cormorant Garamond',Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--ink);color:white;min-height:100vh;overflow-x:hidden}
+
+  /* Animated background */
+  .bg-glow{position:fixed;inset:0;pointer-events:none;z-index:0}
+  .bg-glow::before{content:'';position:absolute;top:-20%;left:30%;width:60%;aspect-ratio:1;background:radial-gradient(circle,rgba(123,47,190,.2) 0%,transparent 65%);animation:drift1 12s ease-in-out infinite}
+  .bg-glow::after{content:'';position:absolute;bottom:-20%;right:20%;width:50%;aspect-ratio:1;background:radial-gradient(circle,rgba(201,150,58,.1) 0%,transparent 65%);animation:drift2 15s ease-in-out infinite}
+  @keyframes drift1{0%,100%{transform:translate(0,0)}50%{transform:translate(-40px,30px)}}
+  @keyframes drift2{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-40px)}}
+
+  /* Layout */
+  .wrap{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3rem 1.5rem;text-align:center}
+
+  /* Logo */
+  .logo{font-family:var(--serif);font-size:16px;font-weight:900;color:rgba(255,255,255,.4);letter-spacing:-.3px;margin-bottom:3rem}
+  .logo span{color:var(--gold)}
+
+  /* Checkmark */
+  .check-wrap{margin-bottom:2rem;animation:popIn .5s cubic-bezier(.34,1.56,.64,1) both}
+  @keyframes popIn{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+  .check-circle{width:80px;height:80px;border-radius:50%;background:rgba(74,222,128,.12);border:2px solid rgba(74,222,128,.3);display:flex;align-items:center;justify-content:center;margin:0 auto;font-size:36px}
+
+  /* Main copy */
+  .tag{font-size:10.5px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;display:flex;align-items:center;justify-content:center;gap:8px}
+  .tag::before,.tag::after{content:'';width:20px;height:1px;background:var(--gold)}
+  h1{font-family:var(--serif);font-size:clamp(32px,5vw,52px);font-weight:900;line-height:1.1;letter-spacing:-1px;margin-bottom:.75rem}
+  h1 em{font-style:italic;color:var(--gold)}
+  .subtitle{font-family:var(--italic);font-style:italic;font-size:19px;color:rgba(255,255,255,.45);margin-bottom:2.5rem;line-height:1.5;max-width:500px}
+
+  /* Confirmation card */
+  .confirm-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:2rem 2.5rem;max-width:500px;width:100%;margin:0 auto 2.5rem;animation:slideUp .5s .2s cubic-bezier(.34,1.2,.64,1) both}
+  @keyframes slideUp{from{transform:translateY(24px);opacity:0}to{transform:translateY(0);opacity:1}}
+  .confirm-row{display:flex;align-items:flex-start;gap:14px;margin-bottom:1.25rem;text-align:left}
+  .confirm-row:last-child{margin-bottom:0}
+  .conf-icon{width:38px;height:38px;border-radius:10px;background:rgba(201,150,58,.12);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+  .conf-label{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+  .conf-value{font-size:14.5px;font-weight:500;color:white;line-height:1.4}
+
+  /* What happens next */
+  .next-title{font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.25rem}
+  .steps-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;max-width:600px;margin:0 auto 3rem;animation:slideUp .5s .4s cubic-bezier(.34,1.2,.64,1) both}
+  .next-step{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:1.25rem 1rem;flex:1;min-width:150px;max-width:180px;text-align:center}
+  .ns-num{font-family:var(--serif);font-size:28px;font-weight:900;color:var(--gold);line-height:1;margin-bottom:.4rem}
+  .ns-text{font-size:12.5px;color:rgba(255,255,255,.5);line-height:1.5}
+
+  /* Redes sociales */
+  .social-section{margin-bottom:2.5rem;animation:slideUp .5s .55s cubic-bezier(.34,1.2,.64,1) both}
+  .social-title{font-size:14px;color:rgba(255,255,255,.5);margin-bottom:1rem}
+  .social-title strong{color:white}
+  .social-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .social-btn{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:50px;padding:10px 20px;font-size:13px;color:white;font-weight:500;transition:background .2s,border-color .2s;text-decoration:none}
+  .social-btn:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25)}
+  .social-icon{font-size:16px}
+
+  /* Reminder tip */
+  .tip{background:rgba(201,150,58,.08);border:1px solid rgba(201,150,58,.2);border-radius:12px;padding:1rem 1.5rem;max-width:500px;margin:0 auto;font-size:13.5px;color:rgba(255,255,255,.6);line-height:1.7;animation:slideUp .5s .7s both}
+  .tip strong{color:var(--gold2)}
+
+  /* Return link */
+  .back-link{display:inline-block;margin-top:2rem;font-size:13px;color:rgba(255,255,255,.3);transition:color .2s}
+  .back-link:hover{color:rgba(255,255,255,.6)}
+
+  @media(max-width:500px){
+    .confirm-card{padding:1.5rem}
+    .steps-row{flex-direction:column;align-items:center}
+    .next-step{max-width:100%;width:100%}
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-glow"></div>
+
+<div class="wrap">
+
+  <div class="logo">THRESH<span>OLD</span></div>
+
+  <!-- Check animado -->
+  <div class="check-wrap">
+    <div class="check-circle">✓</div>
+  </div>
+
+  <!-- Headline -->
+  <div class="tag">Llamada confirmada</div>
+  <h1>Tu lugar está<br><em>reservado.</em></h1>
+  <p class="subtitle">Te esperamos con toda la preparación hecha. Esto ya empezó.</p>
+
+  <!-- Datos de la llamada -->
+  <div class="confirm-card">
+    <div class="confirm-row">
+      <div class="conf-icon">📅</div>
+      <div>
+        <div class="conf-label">Tu llamada</div>
+        <div class="conf-value">Diagnóstico gratuito · 30 minutos<br><span style="color:var(--gold);font-size:13px">Revisá tu email para el link de la videollamada</span></div>
+      </div>
+    </div>
+    <div class="confirm-row">
+      <div class="conf-icon">📋</div>
+      <div>
+        <div class="conf-label">Antes de la llamada</div>
+        <div class="conf-value">No prepares nada especial. Queremos verte tal cual sos hoy — eso nos da la mejor información para diseñar tu camino.</div>
+      </div>
+    </div>
+    <div class="confirm-row">
+      <div class="conf-icon">📍</div>
+      <div>
+        <div class="conf-label">El día de la llamada</div>
+        <div class="conf-value">Lugar tranquilo · Buena conexión · Cámara encendida · Sé honesto/a con tu situación — te va a servir más que intentar impresionar.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Qué pasa después -->
+  <div class="next-title">Qué pasa en los próximos días</div>
+  <div class="steps-row">
+    <div class="next-step">
+      <div class="ns-num">1</div>
+      <div class="ns-text">Recibís confirmación por email con el link de la videollamada</div>
+    </div>
+    <div class="next-step">
+      <div class="ns-num">2</div>
+      <div class="ns-text">Ailin u Ornella te escriben por WhatsApp antes de la llamada</div>
+    </div>
+    <div class="next-step">
+      <div class="ns-num">3</div>
+      <div class="ns-text">30 minutos de diagnóstico real · Sin venta forzada</div>
+    </div>
+    <div class="next-step">
+      <div class="ns-num">4</div>
+      <div class="ns-text">Si tiene sentido, te presentamos la propuesta personalizada</div>
+    </div>
+  </div>
+
+  <!-- Seguir en redes -->
+  <div class="social-section">
+    <p class="social-title">Mientras esperás la llamada, <strong>seguinos en redes.</strong><br>Publicamos contenido todos los días.</p>
+    <div class="social-btns">
+      <a href="[LINK INSTAGRAM PROFE]" target="_blank" class="social-btn">
+        <span class="social-icon">📸</span> @ailin.threshold
+      </a>
+      <a href="[LINK INSTAGRAM SOCIA]" target="_blank" class="social-btn">
+        <span class="social-icon">📸</span> @ornella.threshold
+      </a>
+      <a href="[LINK TIKTOK]" target="_blank" class="social-btn">
+        <span class="social-icon">▶</span> TikTok
+      </a>
+    </div>
+  </div>
+
+  <!-- Tip final -->
+  <div class="tip">
+    <strong>Un tip antes de la llamada:</strong> Pensá en una situación concreta donde el inglés te frenó o te costó una oportunidad. Eso es lo primero que te vamos a preguntar — y cuanto más específico sea tu ejemplo, más útil va a ser la conversación.
+  </div>
+
+  <a href="/" class="back-link">← Volver al sitio</a>
+
+</div>
+
+</body>
+</html>

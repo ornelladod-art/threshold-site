@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checklist — Threshold Website</title>
+<style>
+  body { font-family: -apple-system, 'Segoe UI', sans-serif; max-width: 680px; margin: 3rem auto; padding: 0 1.5rem; color: #1C1438; line-height: 1.7; }
+  h1 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+  .sub { color: #7A6B94; font-size: 14px; margin-bottom: 2rem; }
+  h2 { font-size: 15px; font-weight: 700; margin: 1.75rem 0 .5rem; padding-top: 1.5rem; border-top: 1px solid #E2D8F0; }
+  h2:first-of-type { border-top: none; padding-top: 0; }
+  .item { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid #F0EBF8; font-size: 14px; }
+  .item:last-child { border-bottom: none; }
+  .item input { margin-top: 4px; flex-shrink: 0; width: 16px; height: 16px; accent-color: #7B2FBE; cursor: pointer; }
+  .item label { cursor: pointer; line-height: 1.6; }
+  .item label strong { color: #7B2FBE; }
+  .item label code { background: #F0EBF8; padding: 1px 6px; border-radius: 4px; font-size: 12px; font-family: monospace; color: #3D1580; }
+  .note { background: #FEF3C7; border-left: 3px solid #D97706; border-radius: 0 8px 8px 0; padding: .6rem 1rem; font-size: 13px; margin: .5rem 0; color: #78350F; }
+  .done { background: #D1FAE5; border-left: 3px solid #059669; border-radius: 0 8px 8px 0; padding: .6rem 1rem; font-size: 13px; margin: .5rem 0; color: #064E3B; }
+  .files { background: #EDE9FE; border-radius: 10px; padding: 1rem 1.25rem; margin: 1rem 0; }
+  .files p { font-size: 13px; color: #4C1D95; margin: 0; }
+  .files ul { margin: .5rem 0 0 1rem; font-size: 13px; color: #5B21B6; }
+</style>
+</head>
+<body>
+
+<h1>✅ Checklist de publicación — Threshold</h1>
+<div class="sub">Todo lo que hay que completar antes y después de publicar el sitio.</div>
+
+<div class="files">
+  <p><strong>Los archivos de tu sitio son:</strong></p>
+  <ul>
+    <li><strong>index.html</strong> — La landing page principal</li>
+    <li><strong>gracias.html</strong> — Página post-agenda de llamada</li>
+    <li><strong>checklist.html</strong> — Este archivo (no se sube a Netlify)</li>
+  </ul>
+</div>
+
+<div class="done">✓ Nombre y concepto de marca: <strong>Threshold</strong></div>
+<div class="done">✓ Nombres de las socias: <strong>Ailin Madio</strong> y <strong>Ornella Deneri</strong></div>
+<div class="done">✓ Exámenes del Exam Mastery: First Certificate, IELTS, TOEFL, BEC Higher, Linguaskill</div>
+<div class="done">✓ Secciones completas: Hero, Problema, Tracks, Exámenes, Equipo, Video, Testimonios, Para quién es, Comparativa, Precios, FAQ, CTA</div>
+
+<h2>🚀 Para publicar hoy (5 minutos)</h2>
+
+<div class="item">
+  <input type="checkbox" id="c1">
+  <label for="c1">Ir a <strong>app.netlify.com/drop</strong> desde el navegador</label>
+</div>
+<div class="item">
+  <input type="checkbox" id="c2">
+  <label for="c2">Arrastrar la carpeta <code>threshold-site</code> al recuadro de Netlify</label>
+</div>
+<div class="item">
+  <input type="checkbox" id="c3">
+  <label for="c3">Crear cuenta gratuita en Netlify (con Google o email)</label>
+</div>
+<div class="item">
+  <input type="checkbox" id="c4">
+  <label for="c4">Cambiar el nombre del sitio: <em>Site configuration → Change site name</em> → <code>threshold-ingles</code></label>
+</div>
+<div class="item">
+  <input type="checkbox" id="c5">
+  <label for="c5">Copiar la URL pública y mandársela a Ornella 🎉</label>
+</div>
+
+<h2>📋 Completar antes de lanzar al público</h2>
+
+<div class="item">
+  <input type="checkbox" id="d1">
+  <label for="d1">Reemplazar <code>[LINK CALENDLY]</code> con el link real de Calendly en <strong>index.html</strong> (aparece 4 veces — usar Ctrl+F para encontrarlo)</label>
+</div>
+<div class="item">
+  <input type="checkbox" id="d2">
+  <label for="d2">Configurar en Calendly: después de agendar, redirigir a <code>tu-url.netlify.app/gracias.html</code></label>
+</div>
+<div class="item">
+  <input type="checkbox" id="d3">
+  <label for="d3">Reemplazar <code>[LINK INSTAGRAM PROFE]</code> en <strong>gracias.html</strong> con el Instagram de Ailin</label>
+</div>
+<div class="item">
+  <input type="checkbox" id="d4">
+  <label for="d4">Reemplazar <code>[LINK INSTAGRAM SOCIA]</code> en <strong>gracias.html</strong> con el Instagram de Ornella</label>
+</div>
+<div class="item">
+  <input type="checkbox" id="d5">
+  <label for="d5">Reemplazar <code>[LINK TIKTOK]</code> en <strong>gracias.html</strong> con el TikTok del programa</label>
+</div>
+<div class="item">
+  <input type="checkbox" id="d6">
+  <label for="d6">Actualizar los links del footer en <strong>index.html</strong> (Instagram, TikTok, WhatsApp, Email)</label>
+</div>
+<div class="item">
+  <input type="checkbox" id="d7">
+  <label for="d7">Actualizar el contador de cupos: en el JS de <strong>index.html</strong>, cambiar <code>cuposDisponibles = 4</code> al número real cada mes</label>
+</div>
+
+<h2>🎬 Cuando tengan el video grabado</h2>
+
+<div class="item">
+  <input type="checkbox" id="e1">
+  <label for="e1">Subir el video a YouTube (modo no listado) o Vimeo</label>
+</div>
+<div class="item">
+  <input type="checkbox" id="e2">
+  <label for="e2">Copiar el link del video</label>
+</div>
+<div class="item">
+  <input type="checkbox" id="e3">
+  <label for="e3">En <strong>index.html</strong>, buscar <code>video-frame</code> y agregar <code>data-url="https://tu-link-de-video"</code></label>
+</div>
+<div class="item">
+  <input type="checkbox" id="e4">
+  <label for="e4">Eliminar el texto de nota en gris debajo del frame del video</label>
+</div>
+
+<h2>🌐 Para el dominio propio (opcional, más adelante)</h2>
+
+<div class="item">
+  <input type="checkbox" id="f1">
+  <label for="f1">Registrar dominio (ej: <code>thresholdingles.com</code>) en NIC Argentina, GoDaddy o Namecheap (~$15 USD/año)</label>
+</div>
+<div class="item">
+  <input type="checkbox" id="f2">
+  <label for="f2">En Netlify: <em>Domain management → Add custom domain</em> → seguir los pasos</label>
+</div>
+
+<h2>🔄 Cómo actualizar el sitio cuando hagan cambios</h2>
+<div class="note">
+  Cada vez que modifiquen algo en los archivos HTML: guardar → volver a Netlify → <em>Deploys → arrastrar la carpeta actualizada</em>. La URL no cambia. Los cambios se publican en segundos.
+</div>
+
+<h2>💡 Testimonios reales — cuando los tengan</h2>
+<div class="item">
+  <input type="checkbox" id="g1">
+  <label for="g1">Reemplazar los testimonios de Valentina R., Marcos C. y Lucía P. con testimonios reales de alumnas en la sección de testimonios de <strong>index.html</strong></label>
+</div>
+<div class="item">
+  <input type="checkbox" id="g2">
+  <label for="g2">Reemplazar los textos de placeholder del equipo con la bio real de Ailin y Ornella</label>
+</div>
+
+<script>
+// Guardar estado de checkboxes en localStorage
+document.querySelectorAll('input[type=checkbox]').forEach(cb => {
+  if (localStorage.getItem(cb.id) === 'true') cb.checked = true;
+  cb.addEventListener('change', () => localStorage.setItem(cb.id, cb.checked));
+});
+</script>
+
+</body>
+</html>
