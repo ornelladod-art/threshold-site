@@ -1,4 +1,4 @@
-/* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v8.8
+/* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v8.9
    Se carga por GTM solo en la tienda demo. Zareva Studio · nov 2026 */
 (function () {
   if (window.__FF) return; window.__FF = 1; setTimeout(function () { document.documentElement.style.visibility = ''; }, 2500);
@@ -228,7 +228,7 @@ body.ff-on #MainContent{padding-top:0!important}
 .ff .btn-red:hover{background:var(--red2)}
 .ff .btn-navy{background:var(--navy);color:#fff!important}
 .ff .btn-line{background:transparent;color:var(--navy)!important;box-shadow:inset 0 0 0 2px var(--navy)}
-.ff .btn-glass{background:rgba(255,255,255,.14);color:#fff!important;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55);backdrop-filter:blur(6px)}
+.ff .btn-glass{background:rgba(255,255,255,.14);color:#fff!important;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .ff .btn-white{background:#fff;color:var(--navy)!important}
 .ff .btn-wa{background:#1FA855;color:#fff!important}
 .ff section{padding:96px 0}
@@ -243,7 +243,7 @@ body.ff-on #MainContent{padding-top:0!important}
 .ff-top .ff-cd{background:rgba(0,0,0,.18);border-radius:8px;padding:3px 10px}
 .ff-top u{font-weight:800;text-underline-offset:3px}
 /* header */
-.ff-hd{position:sticky;top:0;z-index:60;background:rgba(247,243,236,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.ff-hd{position:sticky;top:0;z-index:60;background:rgba(247,243,236,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .ff-hd .w{display:flex;align-items:center;gap:26px;height:76px}
 .ff-hd img{height:40px;width:auto}
 .ff-hd nav{display:flex;gap:26px;margin-left:10px;font-weight:600;font-size:15px}
@@ -268,7 +268,7 @@ body.ff-on #MainContent{padding-top:0!important}
 .ff-hero .yt .hv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .ff-hero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,27,77,.25) 0%,rgba(14,27,77,.15) 35%,rgba(10,18,52,.88) 100%),linear-gradient(90deg,rgba(10,18,52,.55),transparent 60%)}
 .ff-hero .w{position:relative;z-index:2;width:100%;padding-top:120px;padding-bottom:64px}
-.ff-hero .tag{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:rgba(255,255,255,.14);backdrop-filter:blur(8px);border-radius:999px;padding:9px 16px}
+.ff-hero .tag{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:rgba(255,255,255,.14);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-radius:999px;padding:9px 16px}
 .ff-hero .tag i{width:8px;height:8px;border-radius:50%;background:#FF5960;animation:ffp 1.4s infinite}
 @keyframes ffp{50%{opacity:.25}}
 .ff-hero h1{font-size:clamp(52px,9vw,124px);margin:22px 0 6px;max-width:980px}
@@ -879,7 +879,7 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
 .ff-mat .two{max-width:760px}
 .ff-lb{position:fixed;inset:0;z-index:9999;background:rgba(9,18,55,.92);display:flex;align-items:center;justify-content:center;padding:20px}
 .ff-lb figure{margin:0;max-height:100%;display:flex;flex-direction:column;align-items:center}
-.ff-lb img{max-height:calc(100vh - 90px);max-width:100%;border-radius:8px;background:#fff}
+.ff-lb img{max-height:calc(100vh - 90px);max-height:calc(100svh - 90px);max-width:100%;border-radius:8px;background:#fff}
 .ff-lb figcaption{color:#fff;font-weight:700;margin-top:12px;font-size:15px;text-align:center}
 .ff-lb button{position:absolute;right:18px;top:14px;width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:var(--navy);font-size:28px;cursor:pointer}
 /* ficha v4 */
