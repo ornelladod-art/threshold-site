@@ -1,7 +1,7 @@
 /* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v8.2
    Se carga por GTM solo en la tienda demo. Zareva Studio · nov 2026 */
 (function () {
-  if (window.__FF) return; window.__FF = 1;
+  if (window.__FF) return; window.__FF = 1; setTimeout(function () { document.documentElement.style.visibility = ''; }, 2500);
   var HOSTS = ['forefrontdemo.mitiendanube.com', 'www.institutoforefront.com', 'institutoforefront.com', 'institutoforefront.mitiendanube.com'];
   if (HOSTS.indexOf(location.hostname) < 0 && !window.FF_FORCE) return;
   var REAL = !/forefrontdemo/.test(location.hostname);
@@ -1435,6 +1435,7 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
       else if (/^\/nivelacion\/?$/.test(PATH)) nivelacion();
       else if (TPL === 'category' || /^\/(productos|cursos-2027|ebooks)\/?$/.test(PATH)) category();
     } catch (e) { console.error('[FF]', e); }
+    document.documentElement.style.visibility = '';
     tick(); setInterval(tick, 1000);
     setInterval(function () { cartUpsell(); var n = $$('#modal-cart .js-cart-item').length, cc = $('.ff-cc'); if (cc) { cc.textContent = n; cc.style.display = n ? 'flex' : 'none'; } }, 800);
     if (ss('ffOpenCart')) { ss('ffOpenCart', null); setTimeout(openCart, 600); }
