@@ -1,4 +1,4 @@
-/* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v8.2
+/* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v8.6
    Se carga por GTM solo en la tienda demo. Zareva Studio · nov 2026 */
 (function () {
   if (window.__FF) return; window.__FF = 1; setTimeout(function () { document.documentElement.style.visibility = ''; }, 2500);
@@ -956,13 +956,13 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
 
   /* ---------- datos de cursos ---------- */
   var PLAN = {
-    'Solo verano': { ord: 1, big: 1, nm: 'Solo el curso de verano', cov: 'febrero: 5 clases, del 1/02 al 5/03', ds: '<b>Las 5 clases de febrero.</b> Si después seguís en marzo, <b>la matrícula te queda con 50% OFF ($57.500)</b>.', mb: [0] },
-    'Pack verano + 5 meses del anual': { ord: 2, big: 1, nm: 'Verano + curso anual con marzo a julio ya pagos', cov: 'el verano y las cuotas de marzo a julio del curso anual (el anual dura de marzo a diciembre)', rest: 'marzo a julio', tag: 'RECOMENDADO · TE AHORRÁS LA MATRÍCULA', ds: 'Hacés el verano y <b>dejás pagos los primeros 5 meses del anual (marzo a julio)</b>. <b>El anual sigue hasta diciembre:</b> después podés elegir pagar mes a mes o comprar otro pack.', sv: 'Te ahorrás la matrícula ($115.000) y los aumentos por IPC de esos meses', mb: [0, 1, 2, 3, 4, 5] },
-    'Pack verano + anual completo': { ord: 3, nm: 'Verano + todo el anual', cov: 'febrero a diciembre (verano + todo el anual)', rest: 'marzo a diciembre', ds: '<b>Todo 2027 resuelto, de febrero a diciembre.</b>', sv: 'Te ahorrás la matrícula ($115.000) y los aumentos por IPC de esos meses', mb: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
+    'Solo verano': { ord: 1, big: 1, nm: 'Solo el curso de verano', cov: 'las 5 clases, del 1/02 al 5/03', ds: '<b>Las 5 clases, del 1/02 al 5/03.</b> Si después seguís en marzo, <b>la matrícula te queda con 50% OFF ($57.500)</b>.', mb: [0] },
+    'Pack verano + 5 meses del anual': { ord: 2, big: 1, nm: 'Verano + curso anual con marzo a julio ya pagos', cov: 'el verano y las cuotas de marzo a julio del curso anual (el anual dura de marzo a diciembre)', rest: 'marzo a julio', tag: 'RECOMENDADO · TE AHORRÁS LA MATRÍCULA', ds: 'Hacés el verano y <b>dejás pagos los primeros 5 meses del anual (marzo a julio)</b>. <b>El anual sigue hasta diciembre:</b> después podés elegir pagar mes a mes o comprar otro pack.', sv: 'Te ahorrás la matrícula ($115.000) y el precio queda fijo por los meses incluidos', mb: [0, 1, 2, 3, 4, 5] },
+    'Pack verano + anual completo': { ord: 3, nm: 'Verano + todo el anual', cov: 'febrero a diciembre (verano + todo el anual)', rest: 'marzo a diciembre', ds: '<b>Todo 2027 resuelto, de febrero a diciembre.</b>', sv: 'Te ahorrás la matrícula ($115.000) y el precio queda fijo por los meses incluidos', mb: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
     'Verano + inscripción al anual': { ord: 4, nm: 'Verano + reservar mi lugar de marzo', cov: 'febrero + tu lugar reservado para marzo (matrícula con 50% OFF)', rest: 'matrícula con 50% OFF', ds: 'Hacés febrero y <b>dejás tu lugar de marzo reservado</b>. Por hacer el verano, <b>la matrícula tiene 50% OFF: $57.500</b> en vez de $115.000.', mb: [0], rs: 1 },
-    'Pack 5 meses (marzo a julio)': { ord: 1, big: 1, nm: 'Curso anual · pagás marzo a julio juntos', cov: 'las cuotas de marzo a julio del curso anual (dura hasta diciembre), sin matrícula', tag: 'RECOMENDADO · TE AHORRÁS LA MATRÍCULA', ds: '<b>Pagás 5 meses juntos y no pagás matrícula.</b> <b>El curso sigue hasta diciembre:</b> después podés elegir pagar mes a mes o comprar otro pack.', sv: 'Te ahorrás la matrícula ($115.000) y los aumentos por IPC de esos meses', mb: [1, 2, 3, 4, 5] },
+    'Pack 5 meses (marzo a julio)': { ord: 1, big: 1, nm: 'Curso anual · pagás marzo a julio juntos', cov: 'las cuotas de marzo a julio del curso anual (dura hasta diciembre), sin matrícula', tag: 'RECOMENDADO · TE AHORRÁS LA MATRÍCULA', ds: '<b>Pagás 5 meses juntos y no pagás matrícula.</b> <b>El curso sigue hasta diciembre:</b> después podés elegir pagar mes a mes o comprar otro pack.', sv: 'Te ahorrás la matrícula ($115.000) y el precio queda fijo por los meses incluidos', mb: [1, 2, 3, 4, 5] },
     'Inscripción (cuota mes a mes)': { ord: 2, big: 1, nm: 'Mes a mes', cov: 'la matrícula. Después pagás la cuota cada mes: pagando del 1 al 7, $116.000 en efectivo o $121.000 por transferencia', ds: '<b>Hoy pagás la matrícula</b> y después la cuota cada mes. Pagando del 1 al 7 de cada mes tenés descuento: <b>la cuota queda en $116.000 en efectivo o $121.000 por transferencia</b>.', mb: [], mm: 1 },
-    'Pack anual (marzo a diciembre)': { ord: 3, nm: 'Marzo a diciembre, pagando todo el año', cov: 'marzo a diciembre, sin matrícula', ds: '<b>Todo el año resuelto, sin matrícula.</b>', sv: 'Te ahorrás la matrícula ($115.000) y los aumentos por IPC de esos meses', mb: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] }
+    'Pack anual (marzo a diciembre)': { ord: 3, nm: 'Marzo a diciembre, pagando todo el año', cov: 'marzo a diciembre, sin matrícula', ds: '<b>Todo el año resuelto, sin matrícula.</b>', sv: 'Te ahorrás la matrícula ($115.000) y el precio queda fijo por los meses incluidos', mb: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] }
   };
   var LVL = {
     'Inicial desde cero': 'Nunca estudiaste o te acordás muy poco', 'Inicial': 'Nunca estudiaste o te acordás muy poco',
@@ -987,7 +987,7 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
     ['¿Qué material usan?', 'Material propio, hecho para adultos. Está incluido: en presencial es un cuadernillo impreso y personalizado; en online, el mismo material en PDF. No tenés que comprar libros aparte.'],
     ['¿Y si falto a una clase?', 'Te compartimos la grabación de la clase del grupo online del mismo nivel, así no te atrasás.'],
     ['¿Hay clase de prueba?', 'No, porque los grupos son reducidos y el material se entrega desde el primer día. Podés pedir una entrevista gratis para conocer cómo trabajamos.'],
-    ['¿Qué es un pack?', 'Es una forma de pagar el curso: abonás 5 meses o el año junto y te ahorrás la matrícula ($115.000) y los aumentos por IPC de esos meses. Los packs no tienen devolución.'],
+    ['¿Qué es un pack?', 'Es una forma de pagar el curso: abonás 5 meses o el año junto y te ahorrás la matrícula ($115.000) y el precio queda fijo por los meses incluidos. Los packs no tienen devolución.'],
     ['¿Cómo pago?', 'Con tarjeta en hasta 3 cuotas sin interés, o con 20% de descuento en efectivo o por transferencia. Si pagás el anual mes a mes, pagando del 1 al 7 de cada mes tenés descuento: la cuota queda en $121.000 en efectivo o por transferencia.'],
     ['¿Cuánto sale la matrícula?', 'La matrícula es de $115.000. Si hacés el curso de verano, tenés 50% OFF: te queda en $57.500. Con los packs (5 meses o anual) no pagás matrícula.'],
     ['¿Aumentan los precios?', 'Dos veces al año, en junio y septiembre, según el IPC. Con el pack te ahorrás esos aumentos y la matrícula ($115.000).'],
@@ -1007,19 +1007,19 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
         <small>CURSO DE VERANO · FEBRERO 2027</small>
         <h3>Verano</h3>
         <p>5 clases, del 1/02 al 5/03. Para arrancar de cero o repasar antes del anual. Presencial u online.</p>
-        <div class="pz"><div><span>Curso de verano (solo febrero)</span><b>${money(175000)}</b></div><div class="alt rec"><span>⭐ O seguí hasta julio: febrero a julio</span><b>${money(775000)}</b><em>Te ahorrás la matrícula ($115.000) y los aumentos por IPC de esos meses</em></div></div>
+        <div class="pz"><div><span>Curso de verano (solo febrero)</span><b>${money(175000)}</b></div><div class="alt rec"><span>⭐ O seguí hasta julio: febrero a julio</span><b>${money(775000)}</b><em>Te ahorrás la matrícula ($115.000) y el precio queda fijo por los meses incluidos</em></div></div>
         <span class="go">Ver horarios y anotarme →</span></a>
       <a class="cc" href="${CFG.urls.anualP}">
         <small>CURSO ANUAL · PRESENCIAL</small>
         <h3>Anual en Rosario</h3>
         <p>Una clase por semana, de marzo a diciembre, en nuestra sede de ${CFG.addr}.</p>
-        <div class="pz"><div><span>Cuota mensual</span><b>${money(121000)}<i>/mes</i></b><em>Pagando del 1 al 7 de cada mes (con descuento) · + matrícula</em></div><div class="alt rec"><span>⭐ O pagá 5 meses juntos (marzo a julio)</span><b>${money(600000)}</b><em>Te ahorrás la matrícula ($115.000) y los aumentos por IPC</em></div></div>
+        <div class="pz"><div><span>Cuota mensual</span><b>${money(116000)}<i>/mes</i></b><em>En efectivo, del 1 al 7 de cada mes ($121.000 por transferencia) · + matrícula</em></div><div class="alt rec"><span>⭐ O pagá 5 meses juntos (marzo a julio)</span><b>${money(600000)}</b><em>Te ahorrás la matrícula ($115.000) y el precio queda fijo esos meses</em></div></div>
         <span class="go">Ver horarios y anotarme →</span></a>
       <a class="cc" href="${CFG.urls.anualO}">
         <small>CURSO ANUAL · ONLINE EN VIVO</small>
         <h3>Anual online</h3>
         <p>Una clase por semana por Zoom, en vivo con tu grupo. Cada clase queda grabada.</p>
-        <div class="pz"><div><span>Cuota mensual</span><b>${money(121000)}<i>/mes</i></b><em>Pagando del 1 al 7 de cada mes (con descuento) · + matrícula</em></div><div class="alt rec"><span>⭐ O pagá 5 meses juntos (marzo a julio)</span><b>${money(600000)}</b><em>Te ahorrás la matrícula ($115.000) y los aumentos por IPC</em></div></div>
+        <div class="pz"><div><span>Cuota mensual</span><b>${money(116000)}<i>/mes</i></b><em>En efectivo, del 1 al 7 de cada mes ($121.000 por transferencia) · + matrícula</em></div><div class="alt rec"><span>⭐ O pagá 5 meses juntos (marzo a julio)</span><b>${money(600000)}</b><em>Te ahorrás la matrícula ($115.000) y el precio queda fijo esos meses</em></div></div>
         <span class="go">Ver horarios y anotarme →</span></a>
     </div>
     <p class="ff-note">¿Querés hacer el verano desde tu casa? → <a href="${CFG.urls.veranoO}">Verano online en vivo</a></p>`;
@@ -1151,8 +1151,8 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
 
   /* ---------- FICHA DE CURSO ---------- */
   var QA = {
-    ver: [['¿Cuándo empieza el curso de verano?', 'Del 1 de febrero al 5 de marzo de 2027: 5 clases, una por semana, de 2 h 30.'], ['¿Sirve si nunca estudié inglés?', 'Sí. Hay grupos de Inicial desde cero, pensados para adultos que nunca estudiaron o se acuerdan muy poco.'], ['¿Qué conviene más, solo verano o el pack?', 'Si ya sabés que vas a seguir en marzo, el pack verano + 5 meses: te ahorrás la matrícula ($115.000) y los aumentos por IPC de esos meses. La mayoría elige esa opción.'], ['¿Puedo hacerlo online desde otra provincia?', 'Sí. Las clases online son en vivo por Zoom, con las mismas dinámicas que en el aula, y quedan grabadas.'], ['¿Hasta cuándo puedo acceder a este precio?', 'Podés acceder al precio de preinscripción hasta el ' + CFG.deadlineTxt + '. Después sube.']],
-    anu: [['¿Cuándo empieza el anual?', 'La semana del 8 de marzo de 2027 y termina en diciembre. Es una clase por semana de 2 horas.'], ['¿Puedo pagar mes a mes?', 'Sí: pagás la matrícula y después la cuota cada mes. Pagando del 1 al 7 de cada mes tenés descuento: la cuota queda en $116.000 en efectivo o $121.000 por transferencia. Con el pack te ahorrás la matrícula ($115.000) y los aumentos por IPC de esos meses.'], ['¿Qué incluye?', 'Clases en grupos reducidos, material propio incluido, práctica extra, seguimiento por WhatsApp y certificado de nivel al aprobar los exámenes de agosto y diciembre.'], ['¿Y si un día no puedo ir?', 'Te compartimos la grabación de la clase del grupo online del mismo nivel, así no te atrasás.'], ['¿Cómo sé mi nivel?', 'Pedí una entrevista de nivelación gratis, presencial u online. Te decimos en qué grupo entrar.']],
+    ver: [['¿Cuándo empieza el curso de verano?', 'Del 1 de febrero al 5 de marzo de 2027: 5 clases, una por semana, de 2 h 30.'], ['¿Sirve si nunca estudié inglés?', 'Sí. Hay grupos de Inicial desde cero, pensados para adultos que nunca estudiaron o se acuerdan muy poco.'], ['¿Qué conviene más, solo verano o el pack?', 'Si ya sabés que vas a seguir en marzo, el pack verano + 5 meses: te ahorrás la matrícula ($115.000) y el precio queda fijo por los meses incluidos. La mayoría elige esa opción.'], ['¿Puedo hacerlo online desde otra provincia?', 'Sí. Las clases online son en vivo por Zoom, con las mismas dinámicas que en el aula, y quedan grabadas.'], ['¿Hasta cuándo puedo acceder a este precio?', 'Podés acceder al precio de preinscripción hasta el ' + CFG.deadlineTxt + '. Después sube.']],
+    anu: [['¿Cuándo empieza el anual?', 'La semana del 8 de marzo de 2027 y termina en diciembre. Es una clase por semana de 2 horas.'], ['¿Puedo pagar mes a mes?', 'Sí: pagás la matrícula y después la cuota cada mes. Pagando del 1 al 7 de cada mes tenés descuento: la cuota queda en $116.000 en efectivo o $121.000 por transferencia. Con el pack te ahorrás la matrícula ($115.000) y el precio queda fijo por los meses incluidos.'], ['¿Qué incluye?', 'Clases en grupos reducidos, material propio incluido, práctica extra, seguimiento por WhatsApp y certificado de nivel al aprobar los exámenes de agosto y diciembre.'], ['¿Y si un día no puedo ir?', 'Te compartimos la grabación de la clase del grupo online del mismo nivel, así no te atrasás.'], ['¿Cómo sé mi nivel?', 'Pedí una entrevista de nivelación gratis, presencial u online. Te decimos en qué grupo entrar.']],
     act: [['¿Para quién es?', 'Para alumnos que cursan Inicial y quieren completar los niveles 6 a 10 antes del anual.'], ['¿Cuándo es?', 'Del 4 de enero al 5 de marzo: 8 clases de 2 h 30 y semana de examen.'], ['¿Qué beneficio tiene?', 'La inscripción al anual 2027 te queda 100% bonificada y arrancás en Pre-Intermedio.']]
   };
   function product() {
@@ -1199,8 +1199,8 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
 
     document.body.classList.add('ff-prod');
     var GAL = isVer ? (isOnl ? ['@ver', '@anO', 'incO', 'pkVer', '@clase', 'niveles', 'm12', 'm05'] : ['@ver', 'pkVer', '@clase', 'niveles', 'incP', 'm12', 'm05']) : isAct ? ['@act', '@clase', 'incP', 'm01', 'm05'] : isOnl ? ['@anO', 'incO', 'pkAnu', '@clase', 'niveles', 'm12', 'm26'] : ['@anP', 'pkAnu', '@clase', 'incP', 'niveles', 'm12', 'm26'];
-    var INC = isOnl ? [['🎥', 'En vivo por Zoom', 'Con profe y compañeros. No son videos grabados.'], ['🎲', 'Mismas dinámicas', 'Los mismos juegos y role plays que en el aula.'], ['⏯️', 'Queda grabada', 'Para repasar cuando quieras.'], ['📄', 'Material en PDF', 'Material propio, incluido.'], ['💬', 'Seguimiento', 'Práctica extra entre clase y clase.'], ['🎓', 'Certificado', 'Con los exámenes de agosto y diciembre.']]
-      : [['👥', 'Grupos reducidos', 'Hablás en todas las clases.'], ['📘', 'Material impreso', 'Propio y personalizado, incluido.'], ['🧉', 'Mate y café', 'En cada clase, en nuestra sede.'], ['💻', 'Opción online', 'Si un día no podés venir, tenés la grabación.'], ['💬', 'Seguimiento', 'Práctica extra entre clase y clase.'], ['🎓', 'Certificado', isAct ? 'Al aprobar el examen de marzo.' : 'Con los exámenes de agosto y diciembre.']];
+    var INC = isOnl ? [['🎥', 'En vivo por Zoom', 'Con profe y compañeros. No son videos grabados.'], ['🎲', 'Mismas dinámicas', 'Los mismos juegos y role plays que en el aula.'], ['⏯️', 'Queda grabada', 'Para repasar cuando quieras.'], ['📄', 'Material en PDF', 'Material propio, incluido.'], ['💬', 'Seguimiento', 'Práctica extra entre clase y clase.'], isVer ? ['📅', 'Cinco clases', 'Del 1/02 al 5/03, una por semana de 2 h 30 min.'] : ['🎓', 'Certificado', 'Con los exámenes de agosto y diciembre.']]
+      : [['👥', 'Grupos reducidos', 'Hablás en todas las clases.'], ['📘', 'Material impreso', 'Propio y personalizado, incluido.'], ['🧉', 'Mate y café', 'En cada clase, en nuestra sede.'], ['💻', 'Opción online', 'Si un día no podés venir, tenés la grabación.'], ['💬', 'Seguimiento', 'Práctica extra entre clase y clase.'], isVer ? ['📅', 'Cinco clases', 'Del 1/02 al 5/03, una por semana de 2 h 30 min.'] : ['🎓', 'Certificado', isAct ? 'Al aprobar el examen de marzo.' : 'Con los exámenes de agosto y diciembre.']];
     var modTxt = isOnl ? 'ONLINE EN VIVO' : (isAnu || (mods.length === 1 && mods[0] === 'Presencial') ? 'PRESENCIAL · ROSARIO' : (QS.modo && mods.length === 1 ? (S.mod === 'Online' ? 'ONLINE EN VIVO' : 'PRESENCIAL · ROSARIO') : 'PRESENCIAL U ONLINE'));
     var meta = isVer ? 'Verano 2027 · Grupos reducidos · Arranca el 1/02' : isAct ? 'Niveles 6 a 10 · Del 4/01 al 5/03' : 'Anual 2027 · Grupos reducidos · Arranca el 8/03';
     var t = left();
@@ -1215,7 +1215,7 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
           <div class="bc"><a href="/">Inicio</a> / <a href="/#cursos">Cursos 2027</a></div>
           <h1>${title}</h1>
           <div class="ff-proof">👥 <b>+300 alumnos adultos por año</b> eligen Forefront · Grupos reducidos</div><div class="ff-cap" style="display:flex;align-items:center;gap:8px;margin:6px 0 2px;font-size:13px;opacity:.85"><span style="flex:0 0 64px;height:5px;border-radius:99px;background:rgba(0,0,0,.1);overflow:hidden"><span style="display:block;width:50%;height:100%;background:#c81e28"></span></span><span>50% de los lugares ya ocupados</span></div>
-          <div class="ff-price"><div class="ff-pnm"></div><div class="ff-plw" style="font-size:13px;opacity:.8;margin:4px 0 2px">Precio de lista <s class="ff-pl"></s> · pagando en efectivo o transferencia queda en:</div><div class="ff-prow"><div class="t ff-pt"></div><div class="k">EFECTIVO O TRANSFERENCIA · 20% OFF<small>Precio final, el descuento ya está aplicado</small></div></div><div class="ff-cov"></div><div class="l">o 3 cuotas sin interés de <b class="ff-pc"></b> con tarjeta</div></div>
+          <div class="ff-price"><div class="ff-pnm"></div><div class="ff-prow"><div class="t ff-pt"></div><div class="k">EN EFECTIVO O POR TRANSFERENCIA<small>20% de descuento incluido</small></div></div><div class="ff-cov"></div><div class="l"><b class="ff-pl"></b> con tarjeta · hasta 3 cuotas sin interés<b class="ff-pc" hidden></b></div></div>
           <div class="ff-steps-wrap"></div>
           <div class="ff-buy"><button class="btn btn-red ff-go" type="button">Inscribirme</button><div class="ff-sum"></div></div>
           <div class="ff-next"><b>Qué pasa después</b><ol><li>Pagás en efectivo, por transferencia o con tarjeta (hasta 3 cuotas).</li><li>Tu lugar en el grupo queda reservado.</li><li>Te contactamos para darte la bienvenida antes de empezar.</li></ol></div>
@@ -1249,7 +1249,7 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
       var gate = mods.length < 2 || !!S.mod;
       if (plans.length && gate) {
         if (S.plan && !(PLAN[S.plan] || {}).big) S.more = true;
-        n++; out += `<div class="ff-step"><div class="st"><i>${n}</i>${lock ? 'Tu opción' : isVer ? '¿Hasta cuándo querés cursar?' : '¿Cómo querés pagarlo?'}${S.ok ? '<span class="ok">✓ Listo</span>' : ''}</div>`;
+        n++; out += `<div class="ff-step"><div class="st"><i>${n}</i>${lock ? 'Tu opción' : isVer ? 'Elegí qué querés abonar' : 'Elegí cómo pagar el curso anual'}${S.ok ? '<span class="ok">✓ Listo</span>' : ''}</div>`;
         var shownOther = false;
         plans.forEach(function (p) {
           var d = PLAN[p] || { ds: '', mb: [] }, pr = priceOf(p), tt = pr * CFG.disc;
@@ -1263,7 +1263,7 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
         });
         if (!lock && (S.plan === 'Solo verano' || S.plan === 'Inscripción (cuota mes a mes)')) {
           var best = isVer ? 'Pack verano + 5 meses del anual' : 'Pack 5 meses (marzo a julio)';
-          out += `<div class="ff-ups" style="display:${S.ok ? 'block' : 'block'}">💡 <b>${isVer ? '¿Ya sabés que seguís en marzo?' : '¿Vas a cursar hasta julio?'}</b> Con el ${isVer ? 'pack verano + 5 meses' : 'pack 5 meses'} te ahorrás la matrícula ($115.000) y los aumentos por IPC de esos meses.<br><button type="button" data-plan="${best}">Cambiar al pack</button></div>`;
+          out += `<div class="ff-ups" style="display:${S.ok ? 'block' : 'block'}">💡 <b>${isVer ? '¿Ya sabés que seguís en marzo?' : '¿Vas a cursar hasta julio?'}</b> Con el ${isVer ? 'pack verano + 5 meses' : 'pack 5 meses'} te ahorrás la matrícula ($115.000) y el precio queda fijo por los meses incluidos.<br><button type="button" data-plan="${best}">Cambiar al pack</button></div>`;
         }
         if (!S.ok) out += '<button type="button" class="btn btn-navy ff-cont" data-ok="1">Continuar con esta opción</button>';
         out += '</div>';
@@ -1347,7 +1347,7 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
     if (box) box.remove();
     if (!ids.length) return;
     var out = '';
-    if ((ids.indexOf(CFG.pid.verano) >= 0 || ids.indexOf(CFG.pid.veranoO) >= 0) && /Solo verano/.test(txt)) out += `<div class="c"><img src="${img('pkVer', 'm')}" alt=""><div><b>¿Seguís en marzo?</b>Pasate al pack verano + 5 meses: <em>te ahorrás la matrícula ($115.000)</em> y los aumentos por IPC.</div><a class="b" href="${ids.indexOf(CFG.pid.veranoO) >= 0 ? CFG.urls.veranoO : CFG.urls.verano}">Ver pack</a></div>`;
+    if ((ids.indexOf(CFG.pid.verano) >= 0 || ids.indexOf(CFG.pid.veranoO) >= 0) && /Solo verano/.test(txt)) out += `<div class="c"><img src="${img('pkVer', 'm')}" alt=""><div><b>¿Seguís en marzo?</b>Pasate al pack verano + 5 meses: <em>te ahorrás la matrícula ($115.000)</em> y el precio queda fijo por esos meses.</div><a class="b" href="${ids.indexOf(CFG.pid.veranoO) >= 0 ? CFG.urls.veranoO : CFG.urls.verano}">Ver pack</a></div>`;
     if (!hasCourse) out += `<div class="c"><img src="${img('cvVer', 'm')}" alt=""><div><b>¿Y si además hablás en clase?</b>Cursos 2027 con precio de preinscripción hasta el ${CFG.deadlineTxt}.</div><a class="b" href="/#cursos">Ver cursos</a></div>`;
     box = h('<div class="ff-cup" data-k="' + key + '">' + out + '<div class="hint">🔒 Último paso: tocá el botón de abajo para pagar en efectivo, por transferencia o con tarjeta</div></div>');
     list.parentNode.insertBefore(box, list.nextSibling);
