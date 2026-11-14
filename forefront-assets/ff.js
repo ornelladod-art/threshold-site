@@ -1,4 +1,4 @@
-/* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v8.9
+/* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v9.0
    Se carga por GTM solo en la tienda demo. Zareva Studio · nov 2026 */
 (function () {
   if (window.__FF) return; window.__FF = 1; setTimeout(function () { document.documentElement.style.visibility = ''; }, 2500);
@@ -128,8 +128,8 @@
 
   var CFG = {
     wa: '5493416643673',
-    calPresencial: '#entrevista-presencial',   // TODO: link del calendario presencial
-    calOnline: '#entrevista-online',           // TODO: link del calendario online
+    calPresencial: 'https://wa.me/5493416643673?text=Hola%21%20Quiero%20coordinar%20una%20entrevista%20de%20nivelaci%C3%B3n%20presencial%20en%20Rosario.',   // TODO: link del calendario presencial
+    calOnline: 'https://wa.me/5493416643673?text=Hola%21%20Quiero%20coordinar%20una%20entrevista%20de%20nivelaci%C3%B3n%20online.',           // TODO: link del calendario online
     examen: 'https://docs.google.com/forms/d/e/1FAIpQLSeNWHOENU2XS1drDLT0SuBaACctjfdo5OiyszTNLubUuJXQiQ/viewform?usp=header',
     ig: 'https://instagram.com/institutoforefront',
     threshold: 'https://thresholdenglish.com/',
@@ -565,7 +565,7 @@ body.ff-prod .ff-waf{bottom:100px}
 .ff-bar{position:fixed;left:0;right:0;bottom:0;z-index:65;background:#fff;border-top:1px solid var(--line);box-shadow:0 -10px 24px rgba(0,0,0,.08);padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));display:none;align-items:center;gap:12px}
 .ff-bar .p{flex:1;min-width:0;font-size:12px;color:var(--mute);line-height:1.25}.ff-bar .p span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ff-bar .p b{display:block;font-size:20px;color:var(--ink)}
 .ff-bar .btn{padding:15px 22px;font-size:16px}
-@media(max-width:900px){.ff-pd .g{grid-template-columns:1fr;gap:6px}.ff-pd .vis{position:static}.ff-pd .vis .main,.ff-pd .vis .th,.ff-pd .vis .why{display:none}.ff-bar{display:flex}.ff-pb .w{padding-top:30px;padding-bottom:30px}.ff-pb:after{background:linear-gradient(90deg,rgba(14,27,77,.95),rgba(14,27,77,.6))}.ff-lv,.ff-hr{grid-template-columns:1fr 1fr}.ff-price .t{font-size:38px}}
+@media(max-width:900px){.ff-pd{padding-bottom:24px!important}.ff-pd .g{grid-template-columns:1fr;gap:6px}.ff-pd .vis{position:static}.ff-pd .vis .main,.ff-pd .vis .th,.ff-pd .vis .why{display:none}.ff-bar{display:flex}.ff-pb .w{padding-top:30px;padding-bottom:30px}.ff-pb:after{background:linear-gradient(90deg,rgba(14,27,77,.95),rgba(14,27,77,.6))}.ff-lv,.ff-hr{grid-template-columns:1fr 1fr}.ff-price .t{font-size:38px}}
 .ff-qa{padding:10px 0 80px}
 .ff-qa .q{border-bottom:1px solid var(--line);padding:18px 0}
 .ff-qa .q b{display:block;font-size:16.5px;color:var(--ink)}
@@ -1029,7 +1029,7 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
       var e = EBOOKS[slug], u = CFG.urls[e.k];
       return `<div class="ff-ebc ${main ? 'main' : ''}">${e.pl ? '<a class="im pl" href="' + u + '" aria-label="' + e.short + '">' + ebPl(e.pl) + '</a>' : '<a class="im" href="' + u + '" style="background-image:url(\'' + img(e.img, 'm') + '\')" aria-label="' + e.short + '"></a>'}<div class="tx">
         <h4>${e.short}</h4><p>${e.what}</p>
-        <div class="pr"><b>${money(e.price)}</b><s>${money(e.was)}</s><em>-${Math.round((1 - e.price / e.was) * 100)}%</em></div>
+        <div class="pr"><b>${money(e.price * CFG.disc)}</b><s>${money(e.was)}</s><em>-${Math.round((1 - e.price / e.was) * 100)}%</em></div><div style="font-size:12.5px;color:var(--mute);margin:-4px 0 10px">En efectivo o por transferencia · ${money(e.price)} con tarjeta</div>
         <div class="bt"><button class="btn btn-red" type="button" data-add="${CFG.pid[e.k]}">Agregar</button><a class="btn btn-line" href="${u}">Ver más</a></div>
         ${main ? '<div class="tip">✓ Si te anotás a un curso, tenés 5% off extra en el pack</div>' : ''}</div></div>`;
     }
@@ -1136,15 +1136,15 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
       <div class="vis">${gal(e.gal, '', e.short)}</div>
       <div><div class="bc"><a href="/">Inicio</a> / <a href="/ebooks/">Ebooks</a></div>
         <span class="ey">Ebook en PDF</span><h1>${(document.querySelector('h1') || {}).textContent || e.short}</h1>
-        <div class="ff-proof">📲 Lo recibís por mail después de pagar · Listo para el celular o para imprimir</div>
-        <div class="ff-price"><s>${money(e.was)}</s><div class="t">${money(e.price)}</div><div class="k">PRECIO PROMOCIONAL · -${Math.round((1 - e.price / e.was) * 100)}%</div><div class="l">En efectivo o por transferencia ${money(e.price * CFG.disc)} · o 3 cuotas sin interés de ${money(e.price / 3)}</div></div>
+        <div class="ff-proof">📲 Recibís el PDF por correo electrónico después de acreditado el pago. Podés leerlo en el celular o imprimirlo.</div>
+        <div class="ff-price"><div class="l" style="margin:0 0 4px">Precio anterior <s>${money(e.was)}</s> · promoción -${Math.round((1 - e.price / e.was) * 100)}%</div><div class="t">${money(e.price * CFG.disc)}</div><div class="k">EN EFECTIVO O POR TRANSFERENCIA · 20% DE DESCUENTO INCLUIDO</div><div class="l"><b>${money(e.price)}</b> con tarjeta · hasta 3 cuotas sin interés</div></div>
         <p style="font-size:16.5px;margin:22px 0 0">${e.what}</p>
         ${e.k === 'pack' ? '<div class="ff-ups">🎓 <b>¿Te anotás a un curso?</b> Si sumás el pack junto con cualquier curso 2027, tenés <b>5% off extra</b>.</div>' : '<div class="ff-ups">📚 <b>¿Querés los 4?</b> El <a href="' + CFG.urls.pack + '" style="text-decoration:underline;font-weight:700">Pack English Essentials</a> trae los 4 ebooks por ' + money(100000) + '.</div>'}
         <div class="ff-buy"><button class="btn btn-red" type="button" data-add="${CFG.pid[e.k]}">Comprar ahora</button></div>
         <div class="ff-trust"><div>✓ Pago seguro con tarjeta o transferencia</div><div>✓ Te llega por mail apenas se acredita el pago</div></div>
       </div></div></div></div>
       ${reelsHTML()}${thHTML()}
-      <div class="ff-bar"><div class="p"><span>${e.short}</span><b>${money(e.price)}</b></div><button class="btn btn-red" type="button" data-add="${CFG.pid[e.k]}">Comprar</button></div></div>`);
+      <div class="ff-bar"><div class="p"><span>${e.short} · transferencia</span><b>${money(e.price * CFG.disc)}</b></div><button class="btn btn-red" type="button" data-add="${CFG.pid[e.k]}">Comprar</button></div></div>`);
     var m = $('#MainContent'); m.insertBefore(wrap, m.firstChild);
     bindAdd(wrap); bindGal(wrap); bindReels(wrap);
   }
@@ -1294,7 +1294,8 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
       $('.ff-pl', wrap).textContent = money(base);
       $('.ff-pc', wrap).textContent = money(base / 3);
       $('.ff-bp', wrap).textContent = money(base * CFG.disc);
-      $('.ff-bn', wrap).textContent = (pnm || title) + ' · efectivo o transferencia';
+      var SH = { 'Solo verano': 'Solo verano', 'Pack verano + 5 meses del anual': 'Verano + 5 meses', 'Pack verano + anual completo': 'Verano + anual', 'Verano + inscripción al anual': 'Verano + matrícula', 'Pack 5 meses (marzo a julio)': 'Pack de 5 meses', 'Inscripción (cuota mes a mes)': 'Matrícula del anual', 'Pack anual (marzo a diciembre)': 'Pack anual' };
+      $('.ff-bn', wrap).textContent = (SH[S.plan] || (plans.length ? 'Hoy pagás' : title)) + ' · transferencia';
       var ready = !!v;
       [$('.ff-go', wrap), $('.ff-go2', wrap)].forEach(function (b) { b.textContent = ready ? 'Inscribirme' : (mods.length > 1 && !S.mod ? 'Elegí cómo cursar' : (plans.length && !S.ok ? 'Elegí una opción de pago' : (lvlIdx >= 0 && !S.lvl ? 'Elegí tu nivel' : 'Elegí tu horario'))); });
       $('.ff-sum', wrap).textContent = v ? '✓ ' + [(PLAN[S.plan] || {}).nm || S.plan, S.lvl, S.hr].filter(Boolean).join(' · ') : 'Completá los pasos de arriba para inscribirte';
