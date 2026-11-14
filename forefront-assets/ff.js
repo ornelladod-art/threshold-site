@@ -1,4 +1,4 @@
-/* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v9.2
+/* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v9.3
    Se carga por GTM solo en la tienda demo. Zareva Studio · nov 2026 */
 (function () {
   if (window.__FF) return; window.__FF = 1; setTimeout(function () { document.documentElement.style.visibility = ''; }, 2500);
@@ -678,8 +678,6 @@ body.ff-landing .ff-more,body.ff-landing .ff-alt{display:none!important}
 @media(max-width:700px){.ff-mods2{grid-template-columns:1fr}}
 .ff-sub{font:600 clamp(28px,3.4vw,38px)/1.05 Fraunces,Georgia,serif;color:var(--navy);margin:50px 0 0}
 .ff-pages{display:grid;grid-template-columns:repeat(5,1fr);overflow:visible;padding:14px 0 0}
-.ff-pages button:nth-child(n+6){display:none}
-@media(max-width:900px){.ff-pages{grid-template-columns:1fr 1fr;gap:14px}.ff-pages button:nth-child(n+5){display:none}}
 @media(max-width:900px){.ff-reels .rl{display:grid;grid-template-columns:1fr 1fr;overflow:visible}.ff-reels .rc{flex:none}.ff-reels .rc:nth-child(5){display:none}}
 .ff-tl4 span,.ff-how li span{font-size:16.5px}
 .ff-tl4 small{font-size:13px}
@@ -876,6 +874,7 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
 .ff-pages img{width:100%;aspect-ratio:640/905;object-fit:cover;border-radius:8px;box-shadow:0 18px 34px -16px rgba(14,27,77,.45);transition:transform .2s;background:#fff}
 .ff-pages button:hover img{transform:translateY(-6px) rotate(-1deg)}
 .ff-pages span{display:block;font-size:13.5px;font-weight:700;color:var(--navy);margin-top:12px;line-height:1.3}
+.ff-pages{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr));gap:26px 18px;overflow:visible!important;scroll-snap-type:none;padding:14px 0 6px}.ff-pages button{flex:none!important;min-width:0}@media(max-width:900px){.ff-pages{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 12px}.ff-pages span{font-size:12px;margin-top:8px}}@media(max-width:420px){.ff-pages{gap:14px 10px}.ff-pages span{font-size:11px}}
 .ff-mat .two{max-width:760px}
 .ff-lb{position:fixed;inset:0;z-index:9999;background:rgba(9,18,55,.92);display:flex;align-items:center;justify-content:center;padding:20px}
 .ff-lb figure{margin:0;max-height:100%;display:flex;flex-direction:column;align-items:center}
