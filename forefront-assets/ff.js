@@ -1,4 +1,4 @@
-/* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v9.3
+/* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v9.4
    Se carga por GTM solo en la tienda demo. Zareva Studio · nov 2026 */
 (function () {
   if (window.__FF) return; window.__FF = 1; setTimeout(function () { document.documentElement.style.visibility = ''; }, 2500);
@@ -113,9 +113,21 @@
     document.body.appendChild(x);
   }
   function matHTML() {
-    return '<div class="ff-pages">' + MAT.map(function (m) { return '<button type="button" data-lb="' + img(m[0]) + '" data-cap="' + m[1] + '"><img loading="lazy" src="' + img(m[0], 'm') + '" alt="Material Forefront: ' + m[1] + '"><span>' + m[1] + '</span></button>'; }).join('') + '</div>';
+    return '<div class="ff-pgw"><button type="button" class="ff-pga prev" aria-label="Ver páginas anteriores">‹</button><button type="button" class="ff-pga next" aria-label="Ver más páginas">›</button><div class="ff-pages">' + MAT.map(function (m) { return '<button type="button" data-lb="' + img(m[0]) + '" data-cap="' + m[1] + '"><img loading="lazy" src="' + img(m[0], 'm') + '" alt="Material Forefront: ' + m[1] + '"><span>' + m[1] + '</span></button>'; }).join('') + '</div><div class="ff-pgc"><span class="n">1</span> de ' + MAT.length + ' páginas · usá las flechas o deslizá</div></div>';
   }
-  function bindLB(root) { $$('[data-lb]', root).forEach(function (b) { b.onclick = function () { lightbox(b.dataset.lb, b.dataset.cap); }; }); }
+  function bindPg(root) {
+    $$('.ff-pgw', root).forEach(function (w) {
+      var t = $('.ff-pages', w), p = $('.prev', w), n = $('.next', w), c = $('.ff-pgc .n', w);
+      if (!t || w._pg) return; w._pg = 1;
+      function step() { var b = t.querySelector('button'); return b ? (b.getBoundingClientRect().width + 16) * Math.max(1, Math.floor(t.clientWidth / (b.getBoundingClientRect().width + 16))) : t.clientWidth; }
+      function upd() { var max = t.scrollWidth - t.clientWidth - 4; p.disabled = t.scrollLeft <= 4; n.disabled = t.scrollLeft >= max; var b = t.querySelector('button'); if (b && c) c.textContent = Math.min(MAT.length, Math.round(t.scrollLeft / (b.getBoundingClientRect().width + 16)) + 1); }
+      p.onclick = function () { t.scrollBy({ left: -step(), behavior: 'smooth' }); };
+      n.onclick = function () { t.scrollBy({ left: step(), behavior: 'smooth' }); };
+      t.addEventListener('scroll', function () { clearTimeout(t._u); t._u = setTimeout(upd, 60); }, { passive: true });
+      setTimeout(upd, 300); window.addEventListener('resize', upd);
+    });
+  }
+  function bindLB(root) { bindPg(root); $$('[data-lb]', root).forEach(function (b) { b.onclick = function () { lightbox(b.dataset.lb, b.dataset.cap); }; }); }
   function dynHTML() {
     return '<div class="ff-dyn"><div class="tabs" role="tablist">' + DYN.map(function (d, i) { return '<button type="button" data-dyn="' + i + '" class="' + (i ? '' : 'on') + '">' + d.t + '</button>'; }).join('') + '</div>' +
       DYN.map(function (d, i) { return '<div class="pn' + (i ? '' : ' on') + '" data-pn="' + i + '"><p>' + d.d + ' <a href="' + d.u + '" target="_blank" rel="noopener">Ver el posteo →</a></p>' + gal(d.im, 'multi', d.t.replace(/^\S+ /, '') + ' en Forefront') + '</div>'; }).join('') + '</div>';
@@ -874,7 +886,7 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
 .ff-pages img{width:100%;aspect-ratio:640/905;object-fit:cover;border-radius:8px;box-shadow:0 18px 34px -16px rgba(14,27,77,.45);transition:transform .2s;background:#fff}
 .ff-pages button:hover img{transform:translateY(-6px) rotate(-1deg)}
 .ff-pages span{display:block;font-size:13.5px;font-weight:700;color:var(--navy);margin-top:12px;line-height:1.3}
-.ff-pages{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr));gap:26px 18px;overflow:visible!important;scroll-snap-type:none;padding:14px 0 6px}.ff-pages button{flex:none!important;min-width:0}@media(max-width:900px){.ff-pages{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 12px}.ff-pages span{font-size:12px;margin-top:8px}}@media(max-width:420px){.ff-pages{gap:14px 10px}.ff-pages span{font-size:11px}}
+.ff-pgw{position:relative}.ff-pga{position:absolute;top:calc(50% - 40px);z-index:3;width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--navy);font:700 30px/1 system-ui,sans-serif;display:flex;align-items:center;justify-content:center;padding:0 0 4px;cursor:pointer;box-shadow:0 10px 24px -10px rgba(14,27,77,.45);transition:opacity .2s}.ff-pga.prev{left:-10px}.ff-pga.next{right:-10px}.ff-pga:disabled{opacity:0;pointer-events:none}.ff-pgc{font-size:13.5px;color:var(--mute);margin-top:4px}.ff-pgc .n{font-weight:800;color:var(--navy)}.ff-pages{scrollbar-width:none}.ff-pages::-webkit-scrollbar{display:none}@media(max-width:700px){.ff-pga{width:40px;height:40px;font-size:26px;top:calc(50% - 46px)}.ff-pga.prev{left:-6px}.ff-pga.next{right:-6px}.ff-pages button{flex-basis:62%!important}}
 .ff-mat .two{max-width:760px}
 .ff-lb{position:fixed;inset:0;z-index:9999;background:rgba(9,18,55,.92);display:flex;align-items:center;justify-content:center;padding:20px}
 .ff-lb figure{margin:0;max-height:100%;display:flex;flex-direction:column;align-items:center}
