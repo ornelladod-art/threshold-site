@@ -1,4 +1,4 @@
-/* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v9.0
+/* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v9.1
    Se carga por GTM solo en la tienda demo. Zareva Studio · nov 2026 */
 (function () {
   if (window.__FF) return; window.__FF = 1; setTimeout(function () { document.documentElement.style.visibility = ''; }, 2500);
@@ -128,8 +128,8 @@
 
   var CFG = {
     wa: '5493416643673',
-    calPresencial: 'https://wa.me/5493416643673?text=Hola%21%20Quiero%20coordinar%20una%20entrevista%20de%20nivelaci%C3%B3n%20presencial%20en%20Rosario.',   // TODO: link del calendario presencial
-    calOnline: 'https://wa.me/5493416643673?text=Hola%21%20Quiero%20coordinar%20una%20entrevista%20de%20nivelaci%C3%B3n%20online.',           // TODO: link del calendario online
+    calPresencial: 'https://calendar.app.google/4FQBbAkS5Net26qn7',   // TODO: link del calendario presencial
+    calOnline: 'https://calendar.app.google/AmbUpA3DvQc5hchJ9',           // TODO: link del calendario online
     examen: 'https://docs.google.com/forms/d/e/1FAIpQLSeNWHOENU2XS1drDLT0SuBaACctjfdo5OiyszTNLubUuJXQiQ/viewform?usp=header',
     ig: 'https://instagram.com/institutoforefront',
     threshold: 'https://thresholdenglish.com/',
