@@ -1,4 +1,4 @@
-/* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v9.5
+/* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v9.6
    Se carga por GTM solo en la tienda demo. Zareva Studio · nov 2026 */
 (function () {
   if (window.__FF) return; window.__FF = 1; setTimeout(function () { document.documentElement.style.visibility = ''; document.documentElement.classList.add('ffok'); }, 2500);
@@ -672,6 +672,7 @@ body.ff-landing .ff-more,body.ff-landing .ff-alt{display:none!important}
 .ff-cov{font-size:15.5px;font-weight:600;color:var(--ink);margin:6px 0 8px}
 .ff-plan .bd{font-size:14.5px;font-weight:700;color:var(--navy);background:#F1F3F9;border-radius:10px;padding:8px 10px;margin-top:10px}
 .ff-plan .pp small:first-child{display:block;font-weight:700}
+@media(max-width:600px){.ff-plan .r{flex-direction:column;gap:8px}.ff-plan .pp{order:-1;text-align:left;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;white-space:normal}.ff-plan .pp small{display:inline!important}.ff-plan .pp b{font-size:22px}.ff-waf{width:48px;height:48px;right:12px}}
 .ff-cc3 .go{margin-top:18px;display:flex;align-items:center;justify-content:center;min-height:56px;border-radius:999px;background:var(--navy);color:#fff;font-weight:800;font-size:17px}
 .ff-cc3 .cc.ver{background:linear-gradient(150deg,#FF7A45 0%,#F2464B 45%,#E8217A 100%);border-color:transparent;color:#fff;box-shadow:0 34px 60px -30px rgba(232,33,122,.7)}
 .ff-cc3 .cc.ver small,.ff-cc3 .cc.ver p{color:#fff}
