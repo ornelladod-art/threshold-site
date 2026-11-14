@@ -1,4 +1,4 @@
-/* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v8.6
+/* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v8.7
    Se carga por GTM solo en la tienda demo. Zareva Studio · nov 2026 */
 (function () {
   if (window.__FF) return; window.__FF = 1; setTimeout(function () { document.documentElement.style.visibility = ''; }, 2500);
@@ -947,7 +947,7 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
   }
   function footer() {
     document.body.appendChild(h(`<footer class="ff ff-ft"><div class="w"><div class="g">
-      <div><img src="${CFG.logo}" alt="Forefront" style="height:42px;filter:brightness(0) invert(1)"><div class="big">Inglés para adultos,<br><em>con gente como vos.</em></div><div>${CFG.addr} · ${CFG.addr2}<br>Presencial en Rosario u online en vivo.</div></div>
+      <div><img src="${CFG.logo}" alt="Forefront" style="height:42px;filter:brightness(0) invert(1)"><div class="big">Instituto de inglés<br><em>para adultos.</em></div><div>${CFG.addr} · ${CFG.addr2}<br>Presencial en Rosario u online en vivo.</div></div>
       <div><h5>Cursos 2027</h5><a href="${CFG.urls.verano}">Verano presencial</a><a href="${CFG.urls.veranoO}">Verano online</a><a href="${CFG.urls.anualP}">Anual presencial</a><a href="${CFG.urls.anualO}">Anual online</a><a href="${CFG.urls.pack}">Ebooks</a></div>
       <div><h5>Instituto</h5><a href="/#metodo">Método Forefront</a><a href="/#comunidad">Comunidad</a><a href="${CFG.urls.nivel}">Nivelación gratis</a><a href="/#preguntas">Preguntas frecuentes</a></div>
       <div><h5>Contacto</h5><a href="${wa()}" target="_blank">WhatsApp</a><a href="${CFG.ig}" target="_blank">Instagram</a><a href="${CFG.threshold}" target="_blank">Threshold · programa 1 a 1</a></div>
@@ -999,7 +999,7 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
   /* ---------- bloques ---------- */
   function coursesHTML(h1) {
     return `<div class="ff-ch"><span class="ey">Cursos 2027</span>${h1 ? '<h1 class="D h2">Elegí tu <em>curso</em></h1>' : '<h2 class="D h2">Elegí tu <em>curso</em></h2>'}
-      <p class="lead">Son 3 opciones. Precios en efectivo o por transferencia (20% OFF), o con tarjeta en 3 cuotas sin interés.</p></div>
+      <p class="lead">Precios en efectivo o por transferencia, con 20% de descuento incluido. Con tarjeta, hasta 3 cuotas sin interés.</p></div>
     <div class="ff-cc3">
       <a class="cc ver" href="${CFG.urls.verano}">
         <span class="rib">☀️ EMPEZÁ EN FEBRERO</span>
@@ -1007,20 +1007,20 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
         <small>CURSO DE VERANO · FEBRERO 2027</small>
         <h3>Verano</h3>
         <p>5 clases, del 1/02 al 5/03. Para arrancar de cero o repasar antes del anual. Presencial u online.</p>
-        <div class="pz"><div><span>Curso de verano (solo febrero)</span><b>${money(175000)}</b></div><div class="alt rec"><span>⭐ O seguí hasta julio: febrero a julio</span><b>${money(775000)}</b><em>Te ahorrás la matrícula ($115.000) y el precio queda fijo por los meses incluidos</em></div></div>
-        <span class="go">Ver horarios y anotarme →</span></a>
+        <div class="pz"><div><span>Solo verano · del 1/02 al 5/03</span><b>${money(175000)}</b></div><div class="alt rec"><span>⭐ Verano + cuotas de marzo a julio del anual</span><b>${money(775000)}</b><em>Te ahorrás la matrícula ($115.000) y el precio queda fijo por los meses incluidos</em></div></div>
+        <span class="go">Ver curso y horarios →</span></a>
       <a class="cc" href="${CFG.urls.anualP}">
         <small>CURSO ANUAL · PRESENCIAL</small>
         <h3>Anual en Rosario</h3>
         <p>Una clase por semana, de marzo a diciembre, en nuestra sede de ${CFG.addr}.</p>
-        <div class="pz"><div><span>Cuota mensual</span><b>${money(116000)}<i>/mes</i></b><em>En efectivo, del 1 al 7 de cada mes ($121.000 por transferencia) · + matrícula</em></div><div class="alt rec"><span>⭐ O pagá 5 meses juntos (marzo a julio)</span><b>${money(600000)}</b><em>Te ahorrás la matrícula ($115.000) y el precio queda fijo esos meses</em></div></div>
-        <span class="go">Ver horarios y anotarme →</span></a>
+        <div class="pz"><div><span>Cuota mensual</span><b>${money(116000)}<i>/mes</i></b><em>En efectivo, del 1 al 7 de cada mes ($121.000 por transferencia) · + matrícula</em></div><div class="alt rec"><span>⭐ Pack de 5 meses: cuotas de marzo a julio</span><b>${money(600000)}</b><em>Te ahorrás la matrícula ($115.000) y el precio queda fijo esos meses</em></div></div>
+        <span class="go">Ver curso y horarios →</span></a>
       <a class="cc" href="${CFG.urls.anualO}">
         <small>CURSO ANUAL · ONLINE EN VIVO</small>
         <h3>Anual online</h3>
         <p>Una clase por semana por Zoom, en vivo con tu grupo. Cada clase queda grabada.</p>
-        <div class="pz"><div><span>Cuota mensual</span><b>${money(116000)}<i>/mes</i></b><em>En efectivo, del 1 al 7 de cada mes ($121.000 por transferencia) · + matrícula</em></div><div class="alt rec"><span>⭐ O pagá 5 meses juntos (marzo a julio)</span><b>${money(600000)}</b><em>Te ahorrás la matrícula ($115.000) y el precio queda fijo esos meses</em></div></div>
-        <span class="go">Ver horarios y anotarme →</span></a>
+        <div class="pz"><div><span>Cuota mensual</span><b>${money(116000)}<i>/mes</i></b><em>En efectivo, del 1 al 7 de cada mes ($121.000 por transferencia) · + matrícula</em></div><div class="alt rec"><span>⭐ Pack de 5 meses: cuotas de marzo a julio</span><b>${money(600000)}</b><em>Te ahorrás la matrícula ($115.000) y el precio queda fijo esos meses</em></div></div>
+        <span class="go">Ver curso y horarios →</span></a>
     </div>
     <p class="ff-note">¿Querés hacer el verano desde tu casa? → <a href="${CFG.urls.veranoO}">Verano online en vivo</a></p>`;
   }
@@ -1033,8 +1033,8 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
         <div class="bt"><button class="btn btn-red" type="button" data-add="${CFG.pid[e.k]}">Agregar</button><a class="btn btn-line" href="${u}">Ver más</a></div>
         ${main ? '<div class="tip">✓ Si te anotás a un curso, tenés 5% off extra en el pack</div>' : ''}</div></div>`;
     }
-    return `<span class="ey">Ebooks Forefront</span>${h1 ? '<h1 class="D h2">' : '<h2 class="D h2">'}Empezá hoy, <em>a tu ritmo</em>${h1 ? '</h1>' : '</h2>'}
-      <p class="lead">Material en PDF para practicar por tu cuenta o acompañar el curso: inglés para entrevistas, reuniones, viajes y gramática, en 10 a 15 minutos por día.</p>
+    return `<span class="ey">Ebooks Forefront</span>${h1 ? '<h1 class="D h2">' : '<h2 class="D h2">'}Ebooks de inglés <em>para adultos</em>${h1 ? '</h1>' : '</h2>'}
+      <p class="lead">Guías en PDF para practicar inglés por tu cuenta o complementar el curso: gramática, viajes, entrevistas laborales y reuniones de trabajo.</p>
       <div class="g g5">${card('pack-english-essentials', 1)}${card('ebook-english-grammar')}${card('ebook-english-for-travelers')}${card('ebook-interviews')}${card('ebook-business-meetings')}</div>`;
   }
   function bindAdd(root) {
@@ -1050,8 +1050,8 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
       ${CFG.yt ? '<div class="yt"><video class="hv" muted autoplay loop playsinline preload="metadata" poster="' + img('risas') + '" src="' + CFG.heroVid + (innerWidth < 700 ? 'hero-celular-lite.mp4' : 'hero-lite.mp4') + '"></video></div>' : '<div class="dots"></div><div class="pg">' + ['m12', 'm05', 'm26'].map(function (k, i) { return '<img class="p' + i + '" src="' + img(k, 'm') + '" alt="Material propio de Forefront">'; }).join('') + '<span class="bub b1">Hi!</span><span class="bub b2">How was your week?</span></div>'}
       <div class="w">
         <span class="tag"><i></i>Inscripciones 2027 abiertas</span>
-        <h1 class="D">Inglés para adultos, <em class="u">con gente como vos.</em></h1>
-        <p class="sub">Clases en grupos reducidos, donde hablás desde la primera clase. Presencial en Rosario u online en vivo.</p>
+        <h1 class="D">Inglés para adultos <em class="u">en Rosario y online.</em></h1>
+        <p class="sub">Practicá conversación desde la primera clase, en grupos de hasta 10 personas y con material de estudio incluido. Presencial en Rosario u online en vivo.</p>
         <div class="cta"><a class="btn btn-red" href="#cursos">Ver cursos y precios</a><a class="btn btn-wa" href="${wa('Hola! Quiero info de los cursos 2027')}" target="_blank">Consultar por WhatsApp</a></div>
         <p class="nv">¿No sabés tu nivel? <a href="${wa('Hola! No sé qué nivel de inglés tengo, me ayudan?')}" target="_blank">Comunicate con nosotros</a></p>
         <div class="proof"><div><b>+300</b>alumnos adultos por año</div><div><b>5</b>niveles, de cero a conversación</div><div><b>Presencial</b>u online en vivo</div></div>
@@ -1061,7 +1061,7 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
     <section class="ff-cur" id="cursos"><div class="w">${coursesHTML()}</div></section>
 
     <section class="ff-how"><div class="w">
-      <div class="hd"><span class="ey">Cómo anotarte</span><h2 class="D">Tres pasos y <em>listo</em></h2></div>
+      <div class="hd"><span class="ey">Cómo anotarte</span><h2 class="D">Cómo <em>inscribirte</em></h2></div>
       <ol>
         <li><i>1</i><b>Elegí tu curso</b><span>Verano, anual presencial o anual online.</span></li>
         <li><i>2</i><b>Elegí nivel y horario</b><span>¿No sabés tu nivel? <a href="${wa('Hola! No sé qué nivel de inglés tengo, me ayudan?')}" target="_blank">Comunicate con nosotros</a>.</span></li>
@@ -1071,9 +1071,9 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
 
     <section class="ff-cmp" id="metodo"><div class="w">
       <span class="ey">Por qué Forefront</span>
-      <h2 class="D h2">Forefront vs. <em>un curso típico</em></h2>
-      <div class="cmp">
-        <div class="col th"><div class="hd">Un curso típico</div>
+      <h2 class="D h2">Cómo enseñamos <em>inglés</em></h2>
+      <div class="cmp" style="grid-template-columns:1fr;max-width:620px">
+        <div class="col th" style="display:none"><div class="hd">Un curso típico</div>
           <div>Libro estándar que comprás aparte</div><div>Mucha gramática y poco uso</div><div>Muchos alumnos por clase</div><div>Clase y te vas</div><div>Pensado para cualquier edad</div></div>
         <div class="col us"><div class="hd"><img src="${CFG.logo}" alt="Forefront"></div>
           <div>✓ Material propio, incluido y hecho para adultos</div><div>✓ Hablás desde la primera clase</div><div>✓ Grupos reducidos</div><div>✓ Dinámicas, juegos y una comunidad</div><div>✓ 100% para adultos, desde los 18</div></div>
@@ -1081,7 +1081,7 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
     </div></section>
 
     <section class="ff-cls" id="como"><div class="w">
-      <span class="ey">Cómo es estudiar en Forefront</span><h2 class="D h2">Hablás desde <em>el minuto uno</em></h2>
+      <span class="ey">Cómo es estudiar en Forefront</span><h2 class="D h2">Hablás desde <em>la primera clase</em></h2>
       <div class="ff-tl4">
         <div><small>01 · AL LLEGAR</small><b>Mate o café, y a charlar</b><span>Contás tu semana en inglés, sin presión.</span></div>
         <div><small>02 · EL TEMA</small><b>Una situación real</b><span>Un viaje, una reunión, un pedido en un restaurante.</span></div>
@@ -1151,7 +1151,7 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
 
   /* ---------- FICHA DE CURSO ---------- */
   var QA = {
-    ver: [['¿Cuándo empieza el curso de verano?', 'Del 1 de febrero al 5 de marzo de 2027: 5 clases, una por semana, de 2 h 30.'], ['¿Sirve si nunca estudié inglés?', 'Sí. Hay grupos de Inicial desde cero, pensados para adultos que nunca estudiaron o se acuerdan muy poco.'], ['¿Qué conviene más, solo verano o el pack?', 'Si ya sabés que vas a seguir en marzo, el pack verano + 5 meses: te ahorrás la matrícula ($115.000) y el precio queda fijo por los meses incluidos. La mayoría elige esa opción.'], ['¿Puedo hacerlo online desde otra provincia?', 'Sí. Las clases online son en vivo por Zoom, con las mismas dinámicas que en el aula, y quedan grabadas.'], ['¿Hasta cuándo puedo acceder a este precio?', 'Podés acceder al precio de preinscripción hasta el ' + CFG.deadlineTxt + '. Después sube.']],
+    ver: [['¿Cuándo empieza el curso de verano?', 'Del 1 de febrero al 5 de marzo de 2027: 5 clases, una por semana, de 2 h 30.'], ['¿Sirve si nunca estudié inglés?', 'Sí. Tenemos grupos de nivel Inicial para adultos que están empezando. Si ya estudiaste algo, podés pedir una entrevista gratuita para elegir el grupo.'], ['¿Qué conviene más, solo verano o el pack?', 'Si ya sabés que vas a seguir en marzo, el pack verano + 5 meses: te ahorrás la matrícula ($115.000) y el precio queda fijo por los meses incluidos.'], ['¿Puedo hacerlo online desde otra provincia?', 'Sí. Las clases online son en vivo por Zoom, con las mismas dinámicas que en el aula, y quedan grabadas.'], ['¿Hasta cuándo puedo acceder a este precio?', 'Podés acceder al precio de preinscripción hasta el ' + CFG.deadlineTxt + '. Después sube.']],
     anu: [['¿Cuándo empieza el anual?', 'La semana del 8 de marzo de 2027 y termina en diciembre. Es una clase por semana de 2 horas.'], ['¿Puedo pagar mes a mes?', 'Sí: pagás la matrícula y después la cuota cada mes. Pagando del 1 al 7 de cada mes tenés descuento: la cuota queda en $116.000 en efectivo o $121.000 por transferencia. Con el pack te ahorrás la matrícula ($115.000) y el precio queda fijo por los meses incluidos.'], ['¿Qué incluye?', 'Clases en grupos reducidos, material propio incluido, práctica extra, seguimiento por WhatsApp y certificado de nivel al aprobar los exámenes de agosto y diciembre.'], ['¿Y si un día no puedo ir?', 'Te compartimos la grabación de la clase del grupo online del mismo nivel, así no te atrasás.'], ['¿Cómo sé mi nivel?', 'Pedí una entrevista de nivelación gratis, presencial u online. Te decimos en qué grupo entrar.']],
     act: [['¿Para quién es?', 'Para alumnos que cursan Inicial y quieren completar los niveles 6 a 10 antes del anual.'], ['¿Cuándo es?', 'Del 4 de enero al 5 de marzo: 8 clases de 2 h 30 y semana de examen.'], ['¿Qué beneficio tiene?', 'La inscripción al anual 2027 te queda 100% bonificada y arrancás en Pre-Intermedio.']]
   };
@@ -1224,9 +1224,9 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
         </div>
       </div></div></div>
       <div class="ff-info"><div class="w">
-        <div class="blk"><span class="ey">Qué incluye</span><h2 class="D h2">Todo lo que necesitás, <em>en el curso</em></h2>
+        <div class="blk"><span class="ey">Qué incluye</span><h2 class="D h2">Lo que incluye <em>el curso</em></h2>
           <div class="inc">${INC.map(function (x) { return '<div><i>' + x[0] + '</i><b>' + x[1] + '</b><span>' + x[2] + '</span></div>'; }).join('')}</div></div>
-        <div class="blk"><span class="ey">Así es una clase</span><h2 class="D h2">Hablás desde <em>el minuto uno</em></h2>
+        <div class="blk"><span class="ey">Así es una clase</span><h2 class="D h2">Hablás desde <em>la primera clase</em></h2>
           <div class="ff-tl4"><div><small>01 · AL LLEGAR</small><b>Mate o café, y a charlar</b><span>Contás tu semana en inglés, sin presión.</span></div><div><small>02 · EL TEMA</small><b>Una situación real</b><span>Un viaje, una reunión, un pedido en un restaurante.</span></div><div><small>03 · LA PRÁCTICA</small><b>Juegos y role plays</b><span>En parejas y en grupo, con corrección en el momento.</span></div><div><small>04 · PARA LA SEMANA</small><b>Práctica corta</b><span>Ejercicios extra para no perder el ritmo.</span></div></div></div>
         <div class="blk"><span class="ey">El material</span><h2 class="D h2">Así es <em>nuestro material</em></h2><p class="lead">${isOnl ? 'En PDF, para la pantalla o para imprimir.' : 'Impreso y personalizado, incluido en el curso.'} Tocá una página para verla grande.</p>${matHTML()}</div>
       </div></div>
@@ -1296,7 +1296,7 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
       $('.ff-bp', wrap).textContent = money(base * CFG.disc);
       $('.ff-bn', wrap).textContent = (pnm || title) + ' · efectivo o transferencia';
       var ready = !!v;
-      [$('.ff-go', wrap), $('.ff-go2', wrap)].forEach(function (b) { b.textContent = ready ? 'Inscribirme' : (mods.length > 1 && !S.mod ? 'Elegí cómo cursar' : (plans.length && !S.ok ? 'Elegí hasta cuándo' : (lvlIdx >= 0 && !S.lvl ? 'Elegí tu nivel' : 'Elegí tu horario'))); });
+      [$('.ff-go', wrap), $('.ff-go2', wrap)].forEach(function (b) { b.textContent = ready ? 'Inscribirme' : (mods.length > 1 && !S.mod ? 'Elegí cómo cursar' : (plans.length && !S.ok ? 'Elegí una opción de pago' : (lvlIdx >= 0 && !S.lvl ? 'Elegí tu nivel' : 'Elegí tu horario'))); });
       $('.ff-sum', wrap).textContent = v ? '✓ ' + [(PLAN[S.plan] || {}).nm || S.plan, S.lvl, S.hr].filter(Boolean).join(' · ') : 'Completá los pasos de arriba para inscribirte';
       var alt = $('.ff-alt', wrap);
       if (isAnu) alt.innerHTML = isOnl ? `¿Preferís venir al instituto? Mirá el <a href="${CFG.urls.anualP}">anual presencial en Rosario</a>.` : `¿No estás en Rosario o preferís desde tu casa? Mirá el <a href="${CFG.urls.anualO}">anual online en vivo</a>.`;
@@ -1363,12 +1363,12 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
       ['Pre-Intermedio (A2)', 'Tenés las bases y querés comunicarte con más seguridad.', 'Tiempos presentes, pasados y futuros; condicionales 0, 1, 2 y 3; voz pasiva.'],
       ['Intermedio (B1)', 'Te comunicás y querés más fluidez y estructuras más complejas.', 'Perfecto continuo; futuro continuo y perfecto; condicionales mixtos; word formation; phrasal verbs.'],
       ['Intermedio Avanzado (B2)', 'Te comunicás con soltura y querés perfeccionarte.', 'Todo lo anterior más reported speech y relative clauses.'],
-      ['Conversación (B2–C1)', 'Entendés bien y querés hablar con naturalidad.', 'Libro propio, artículos, series, TED Talks, debates y role plays. No es solo charlar: seguís puliendo.']
+      ['Conversación (B2–C1)', 'Entendés bien y querés hablar con naturalidad.', 'Material propio, artículos, series, charlas TED, debates y simulaciones.']
     ];
     var html = `<div class="ff">
       <div class="ff-nv-h"><div class="w"><span class="ey">Nivelación gratis</span><h1 class="D">¿No sabés <em>tu nivel?</em></h1><p>Es lo más común, sobre todo si estudiaste hace años. Te ayudamos a encontrar el grupo justo: ni tan fácil que te aburras, ni tan difícil que te frustres.</p></div></div>
       <section style="padding-top:0" id="entrevista"><div class="w"><div class="ff-ways">
-        <div class="ff-way rec"><span class="k">RECOMENDADO · 15 MINUTOS</span><h3>Entrevista presencial</h3><p>Una charla en nuestra sede de ${CFG.addr}. Te decimos exactamente en qué grupo entrar y conocés el instituto.</p><a class="btn btn-red" href="${CFG.calPresencial}" target="_blank">Elegir día y horario</a></div>
+        <div class="ff-way rec"><span class="k">RECOMENDADO · 15 MINUTOS</span><h3>Entrevista presencial</h3><p>Una charla en nuestra sede de ${CFG.addr}. Te ayudamos a elegir tu grupo y conocés el instituto.</p><a class="btn btn-red" href="${CFG.calPresencial}" target="_blank">Elegir día y horario</a></div>
         <div class="ff-way"><span class="k">GRATIS · POR VIDEOLLAMADA</span><h3>Entrevista online</h3><p>La misma charla, desde donde estés. Ideal si vas a cursar online o no podés venir.</p><a class="btn btn-navy" href="${CFG.calOnline}" target="_blank">Elegir día y horario</a></div>
         <div class="ff-way"><span class="k">25 A 30 MINUTOS</span><h3>Examen escrito</h3><p>Un formulario para hacer tranquilo, sin traductor ni IA. Lo revisamos y te escribimos con nuestra recomendación.</p><a class="btn btn-line" href="${CFG.examen}" target="_blank">Hacer el examen</a></div>
       </div></div></section>
@@ -1405,8 +1405,8 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
     });
     $('.ff-calc', m).onclick = function () {
       var s0 = A[0] || 0, s = s0 + (A[1] || 0) + (A[2] || 0) + (A[3] || 0) * 1.5, r;
-      if (s0 === 0 || s <= 1.5) r = ['Inicial', 'Arrancás con bases firmes, con material pensado para adultos. Si ya estudiaste algo, lo confirmamos en una entrevista.'];
-      else if (s <= 5) r = ['Revisión Inicial', 'Tenés algo de base. Un repaso de Inicial en el verano te deja listo para el anual.'];
+      if (s0 === 0 || s <= 1.5) r = ['Inicial', 'Podés empezar por Inicial si estás dando tus primeros pasos o recordás poco de lo que estudiaste. Lo confirmamos en una entrevista gratuita.'];
+      else if (s <= 5) r = ['Revisión Inicial', 'En verano podés repasar los contenidos de Inicial si ya estudiaste inglés y querés retomar.'];
       else if (s <= 8.5) r = ['Pre-Intermedio', 'Tenés las bases: te sirve la revisión de Pre-Intermedio en verano, o Pre-Intermedio en el anual.'];
       else if (s <= 11.5) r = ['Intermedio', 'Te comunicás: Intermedio es tu lugar para ganar fluidez.'];
       else r = ['Intermedio Avanzado o Conversación', 'Tenés un buen nivel. Te conviene confirmar con una entrevista cuál de los dos te queda mejor.'];
