@@ -1,4 +1,4 @@
-/* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v9.1
+/* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v9.2
    Se carga por GTM solo en la tienda demo. Zareva Studio · nov 2026 */
 (function () {
   if (window.__FF) return; window.__FF = 1; setTimeout(function () { document.documentElement.style.visibility = ''; }, 2500);
@@ -824,7 +824,7 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
 .ff-met .pl p{color:var(--mute)}
 @media(max-width:900px){.ff-met .g3{grid-template-columns:1fr}}
 /* comparativa */
-.ff-cmp{background:var(--navy);color:#fff}
+.ff-cmp .ey,.ff-cmp .h2 em{color:#8FD0FF!important}.ff-why-lead{color:rgba(255,255,255,.78)!important;margin-top:10px;max-width:640px}.ff-why{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:34px}.ff-why>div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:24px 20px;display:flex;flex-direction:column;gap:8px;min-width:0}.ff-why i{font-style:normal;font-size:13px;font-weight:800;letter-spacing:.12em;color:#8FD0FF}.ff-why b{font-size:18px;line-height:1.25;color:#fff}.ff-why span{font-size:15px;line-height:1.5;color:rgba(255,255,255,.72)}@media(max-width:1100px){.ff-why{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:760px){.ff-why{grid-template-columns:1fr;gap:10px}.ff-why>div{padding:20px 18px}}.ff-cmp{background:var(--navy);color:#fff}
 .ff-cmp .h2{color:#fff}.ff .ff-cmp .h2 em{color:#FF8E93}.ff-cmp .ey{color:#FF8E93}
 .ff-cmp .cmp{display:grid;grid-template-columns:1fr 1.15fr;gap:0;margin-top:40px;align-items:center}
 .ff-cmp .col{border-radius:28px;padding:30px}
@@ -1072,11 +1072,13 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
     <section class="ff-cmp" id="metodo"><div class="w">
       <span class="ey">Por qué Forefront</span>
       <h2 class="D h2">Cómo enseñamos <em>inglés</em></h2>
-      <div class="cmp" style="grid-template-columns:1fr;max-width:620px">
-        <div class="col th" style="display:none"><div class="hd">Un curso típico</div>
-          <div>Libro estándar que comprás aparte</div><div>Mucha gramática y poco uso</div><div>Muchos alumnos por clase</div><div>Clase y te vas</div><div>Pensado para cualquier edad</div></div>
-        <div class="col us"><div class="hd"><img src="${CFG.logo}" alt="Forefront"></div>
-          <div>✓ Material propio, incluido y hecho para adultos</div><div>✓ Hablás desde la primera clase</div><div>✓ Grupos reducidos</div><div>✓ Dinámicas, juegos y una comunidad</div><div>✓ 100% para adultos, desde los 18</div></div>
+      <p class="lead ff-why-lead">Todo está pensado para cómo aprende un adulto. Nada genérico.</p>
+      <div class="ff-why">
+        <div><i>01</i><b>Material propio, incluido</b><span>Lo escribimos nosotros, con temas de adultos. No comprás ningún libro aparte.</span></div>
+        <div><i>02</i><b>Hablás desde la primera clase</b><span>Cada clase es práctica: conversación, situaciones reales y role plays.</span></div>
+        <div><i>03</i><b>Grupos reducidos</b><span>Hasta 10 personas por grupo, así el profe te escucha y te corrige.</span></div>
+        <div><i>04</i><b>Dinámicas y comunidad</b><span>Juegos en cada clase, grupo de WhatsApp con tu profe y eventos en el instituto.</span></div>
+        <div><i>05</i><b>100% para adultos</b><span>Grupos desde los 18 años, con gente que busca lo mismo que vos.</span></div>
       </div>
     </div></section>
 
