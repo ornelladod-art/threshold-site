@@ -1,4 +1,4 @@
-/* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v9.7
+/* Forefront · capa de diseño y conversión para Tiendanube (tema Ipanema) · v9.8
    Se carga por GTM solo en la tienda demo. Zareva Studio · nov 2026 */
 (function () {
   if (window.__FF) return; window.__FF = 1; setTimeout(function () { document.documentElement.style.visibility = ''; document.documentElement.classList.add('ffok'); }, 2500);
@@ -1430,6 +1430,18 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
     };
   }
 
+  /* ---------- 404 ---------- */
+  function notFound() {
+    document.body.classList.add('ff-pg');
+    var m = $('#MainContent'); if (!m) return;
+    m.insertBefore(h(`<div class="ff">
+      <div class="ff-nv-h"><div class="w"><span class="ey">Inglés adultos · Error 404</span><h1 class="D">Esta página <em>no existe</em></h1><p>Puede que el link esté mal escrito o que la página ya no esté. Te dejamos los cursos 2027 para que sigas desde acá.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:22px"><a class="btn btn-red" href="/#cursos">Ver cursos 2027</a><a class="btn btn-white" href="${wa('Hola! Tengo una consulta')}" target="_blank" rel="noopener">Escribinos por WhatsApp</a></div></div></div>
+      <section class="ff-cur"><div class="w">${coursesHTML()}</div></section>
+    </div>`), m.firstChild);
+    bindAdd(m);
+  }
+
   /* ---------- arranque ---------- */
   function boot() {
     if (!document.body) return setTimeout(boot, 30);
@@ -1448,6 +1460,7 @@ body.ff-prod #ns-section-alternative_products,body.ff-prod .section-related-prod
       if (TPL === 'home' || PATH === '/') home();
       else if (TPL === 'product' || /^\/productos\/[^/]+\/$/.test(PATH)) product();
       else if (/^\/nivelacion\/?$/.test(PATH)) nivelacion();
+      else if (TPL === '404' || document.querySelector('.section-main-404') || /template-404/.test(document.body.className)) notFound();
       else if (TPL === 'category' || /^\/(productos|cursos-2027|ebooks)\/?$/.test(PATH)) category();
     } catch (e) { console.error('[FF]', e); }
     document.documentElement.style.visibility = ''; document.documentElement.classList.add('ffok');
